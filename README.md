@@ -34,7 +34,6 @@ Some highlights of the configuration:
 * Uses *mg* from the OpenBSD base as the editor.
 * Turns CapsLock into a Ctrl (in both console and xorg).
 * Turns AltGr into an Alt/Meta (in both console and xorg).
-* Sets *us* keyboard layout.
 * Enables *apmd* (Advanced Power Management daemon).
 * Modifies terminal prompt.
 

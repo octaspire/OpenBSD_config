@@ -12,8 +12,8 @@ echo "# Read the script and make sure it is OK, before running."
 echo "#############################################################"
 read answer
 case "$answer" in
-	yes ) echo "Starting to copy";;
-        * ) exit;;
+    yes ) echo "Starting to copy";;
+    * ) exit;;
 esac
 
 
@@ -23,7 +23,7 @@ esac
 ###########################################################################
 echo "Installing font"
 if [ ! -d "$HOME/.fonts" ]; then
-	mkdir "$HOME/.fonts"
+    mkdir "$HOME/.fonts"
 fi
 cp AnonymousPro/Anonymous_Pro.ttf "$HOME/.fonts"
 fc-cache # update fonts
@@ -32,7 +32,7 @@ rc=$?; if [[ $rc != 0 ]]; then echo "Font installation failed"; exit $rc; fi
 
 
 ###########################################################################
-# Copy dotfiles into home directory. 
+# Copy dotfiles into home directory.
 ###########################################################################
 echo "Copying dotfiles into $HOME"
 cp .kshrc      "$HOME"
@@ -45,7 +45,7 @@ cp .mg         "$HOME"
 
 
 ###########################################################################
-# Copy wsconsctl.conf and rc.conf.local into /etc using sudo 
+# Copy wsconsctl.conf and rc.conf.local into /etc using sudo
 ###########################################################################
 echo "Copying wsconsctl.conf and rc.conf.local into /etc using sudo"
 sudo cp wsconsctl.conf /etc
