@@ -1,0 +1,6 @@
+xterm*font:       *-Anonymous_Pro-*-*-*-14-*
+xterm*loginshell: true
+xterm*utf8:       true
+xterm*geometry:   140x120
+xterm*visualBell: true
+xterm*scrollBar:  false

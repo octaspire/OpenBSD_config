@@ -1,0 +1,6 @@
+XTerm*loginShell:true
+XTerm*faceName: Anonymous_Pro
+XTerm*faceSize: 14
+XTerm*metaSendEscape: true
+XTerm*eightBitInput: false
+
