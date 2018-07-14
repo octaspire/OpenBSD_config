@@ -1,11 +1,11 @@
-xset -b                                   # Disable bell
+xset -b                                 # Disable bell
 xsetroot -solid black &
 
-setxkbmap -option ""                   \  # Clear existing options
-          -option "caps:none"          \  # Make CapsLock into Ctrl
-          -option "caps:ctrl_modifier" \  # ...
-          -option "lv3:none"           \  # Make AltGr into Alt
-          -option "lv3:lalt_modifier"     # ...
+setxkbmap -option ""                    # Clear existing options
+setxkbmap -option "caps:none"           # Make CapsLock into Ctrl
+setxkbmap -option "caps:ctrl_modifier"  # ...
+setxkbmap -option "lv3:none"            # Make AltGr into Alt
+setxkbmap -option "lv3:lalt_modifier"   # ...
 
-exec cwm                                  # Start window manager
+exec cwm                                # Start window manager
 
