@@ -8,7 +8,7 @@ specifically with OpenBSD.
 You *MUST* check that the `install.sh` script
 is OK before running it. It will OVERWRITE files
 and copy some files using *SUDO*.
- 
+
 ````sh
 cd OpenBSD_config
 ./install.sh
@@ -19,6 +19,7 @@ startx
 git clone https://github.com/octaspire/dotfiles.git
 cd dotfiles
 stow tmux
+stow mg
 cd
 tmux
 # Press CapsLock + b and then %.
@@ -80,4 +81,5 @@ cd
 git clone https://github.com/octaspire/dotfiles.git
 cd dotfiles
 stow tmux
+stow mg
 ````
