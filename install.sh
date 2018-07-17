@@ -44,10 +44,11 @@ cp .xinitrc    "$HOME"
 
 
 ###########################################################################
-# Copy wsconsctl.conf and rc.conf.local into /etc using sudo
+# Copy wsconsctl.conf, doas.conf and rc.conf.local into /etc using sudo
 ###########################################################################
-echo "Copying wsconsctl.conf and rc.conf.local into /etc using sudo"
+echo "Copying wsconsctl.conf, doas.conf and rc.conf.local into /etc using sudo"
 sudo cp wsconsctl.conf /etc
+sudo cp doas.conf      /etc
 sudo cp rc.conf.local  /etc
 sudo -k # Invalidate possibly cached credentials
 
