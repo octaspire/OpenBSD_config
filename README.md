@@ -118,7 +118,7 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
     If syspatch complaints about invalid URL in `/etc/installurl` run command
     `echo "https://ftp.eu.openbsd.org/pub/OpenBSD" > /etc/installurl`
     (or use another mirror that is closer to you).
-42. `pkg_add sudo colorls stow git gmake groff firefox zathura zathura-ps zathura-pdf-mupdf sdl2 sdl2-image sdl2-mixer sdl2-ttf`
+42. `pkg_add sudo colorls stow git gmake gnupg-2.2.4 groff firefox zathura zathura-ps zathura-pdf-mupdf sdl2 sdl2-image sdl2-mixer sdl2-ttf`
     Install any additional packages you might need. Above is just an example, if you do not need something, don't install it.
 43. Use `visudo` command to give 'wheel' group sudo permissions,
     by uncommenting the wheel-line from the sudoers file, as
@@ -158,6 +158,19 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
 59. Reboot machine by writing: `doas /sbin/reboot`
 
 All done and the wireless connection should work also.
+
+To build latest GNU Emacs, download `emacs-26.1.tar.gz`, `emacs-26.1.tar.gz.sig` and `gnu-keyring.gpg`.
+Issue commands:
+
+```
+gpg2 --import gnu-keyring.gpg
+gpg2 --verify emacs-26.1.tar.gz.sig emacs-26.1.tar.gz # check that the signature is good.
+tar xfz emacs-26.1.tar.gz
+cd emacs-26.1
+./configure --with-jpeg=no --with-gif=no --with-tiff=no
+gmake -j4
+sudo gmake install
+```
 
 You can make mounting of external flash drives easier by modifying file `/etc/fstab` and
 by adding line similar to the one below (check and use the correct device name):
