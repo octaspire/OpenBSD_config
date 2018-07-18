@@ -127,6 +127,7 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
     visudo
     exit
     ```
+    After logging out login as your regular user (that can now use `sudo` to run commands as root).
 44. `git clone https://github.com/octaspire/OpenBSD_config.git`
 45. `cd OpenBSD_config`
 46.  `./install.sh`
