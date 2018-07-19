@@ -18,6 +18,7 @@ git clone https://github.com/octaspire/dotfiles.git
 cd dotfiles
 stow tmux
 stow mg
+stow cwm
 cd
 tmux
 # Press CapsLock + b and then %.
@@ -28,7 +29,7 @@ mg
 Some highlights of the configuration:
 
 * Installs a nice-looking TrueType font for xterm (and other xorg).
-* Uses *cwm* from the OpenBSD base as the window manager.
+* Uses *cwm* from the OpenBSD base as the window manager. Cwm keybindings are changed so that those would not conflict with the ones from GNU Emacs.
 * Uses *Korn shell* from the OpenBSD base as the shell.
 * Uses *mg* from the OpenBSD base as the editor.
 * Turns CapsLock into a Ctrl (in both console and xorg).
@@ -137,7 +138,7 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
 50. `git clone https://github.com/octaspire/dotfiles.git`
 51. `cd dotfiles`
 52. `stow tmux`
-53. `stow mg`
+53. `stow mg` and `stow cwm`
 54. To configure wlan, add file `/etc/hostname.iwm0`:
     `sudoedit /etc/hostname.iwm0`
 55. Write into the file the following three lines:
