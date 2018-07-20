@@ -4,3 +4,4 @@ xterm*utf8:       true
 xterm*geometry:   140x120
 xterm*visualBell: true
 xterm*scrollBar:  false
+xterm*selectToClipboard: true
