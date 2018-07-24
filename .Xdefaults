@@ -1,6 +1,6 @@
 XTerm*loginShell:true
 XTerm*faceName: Anonymous_Pro
-XTerm*faceSize: 14
+XTerm*faceSize: 12
 XTerm*metaSendEscape: true
 XTerm*eightBitInput: false
 XTerm*selectToClipboard: true
