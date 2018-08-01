@@ -64,7 +64,10 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
    a secure boot setting, and if it is on, turn it off, save the
    settings and try again.
 4. When asked wheter to (I)nstall, (U)pgrade, (A)utoinstall or (S)hell, write `s <enter>` for shell.
-5. Give command: `dd if=/dev/urandom of=/dev/rsd0c bs=1m`. Grab a coffee; this will take about 24 minutes. **This command will overwrite everything on the disk with random data**.
+5. Give command: `dd if=/dev/urandom of=/dev/rsd0c bs=1m`. Grab a coffee;
+   this will take about 24 minutes on a T470 and 49 minutes on an X1 Carbon,
+   and even longer if you have a larger hard didk.
+   **This command will overwrite everything on the disk with random data**.
 6. Use GPT for UEFI booting: `fdisk -iy -g -b 960 sd0`.
 7. Give command: `disklabel -E sd0`. Inside disklabel:
    ```
