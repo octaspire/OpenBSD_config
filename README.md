@@ -57,7 +57,12 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
 1. Connect USB stick and RJ45 cable and boot the machine.
 2. Press F12 when the Lenovo logo is shown to enter the Boot Menu.
 3. In the Boot Menu, select your USB stick with the arrow keys and press enter.
-   (It might be shown as USB HDD: something XYGB).
+   (It might be shown as USB HDD: something XYGB). If the machine
+   wont start from the USB, you might have to disable secure boot
+   at the BIOS configuration. You can enter the setup by rebooting
+   the machine and pressing enter during the startup. Look for
+   a secure boot setting, and if it is on, turn it off, save the
+   settings and try again.
 4. When asked wheter to (I)nstall, (U)pgrade, (A)utoinstall or (S)hell, write `s <enter>` for shell.
 5. Give command: `dd if=/dev/urandom of=/dev/rsd0c bs=1m`. Grab a coffee; this will take about 24 minutes. **This command will overwrite everything on the disk with random data**.
 6. Use GPT for UEFI booting: `fdisk -iy -g -b 960 sd0`.
