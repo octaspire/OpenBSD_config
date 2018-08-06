@@ -127,7 +127,7 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
     If syspatch complaints about invalid URL in `/etc/installurl` run command
     `echo "https://ftp.eu.openbsd.org/pub/OpenBSD" > /etc/installurl`
     (or use another mirror that is closer to you).
-42. `pkg_add sudo colorls stow git gmake gnupg-2.2.4 groff firefox zathura zathura-ps zathura-pdf-mupdf sdl2 sdl2-image sdl2-mixer sdl2-ttf`
+42. `pkg_add sudo colorls coreutils stow git gmake gnupg-2.2.4 groff firefox zathura zathura-ps zathura-pdf-mupdf sdl2 sdl2-image sdl2-mixer sdl2-ttf`
     Install any additional packages you might need. Above is just an example, if you do not need something, don't install it.
 43. Use `visudo` command to give 'wheel' group sudo permissions,
     by uncommenting the wheel-line from the sudoers file, as
