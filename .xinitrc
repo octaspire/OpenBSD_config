@@ -7,5 +7,9 @@ setxkbmap -option "caps:ctrl_modifier"  # ...
 setxkbmap -option "lv3:none"            # Make AltGr into Alt
 setxkbmap -option "lv3:lalt_modifier"   # ...
 
+if [ -f ~/.fehbg ]; then
+    ~/.fehbg &
+fi
+
 exec cwm                                # Start window manager
 

@@ -127,7 +127,7 @@ Download OpenBSD 6.3 or newer for amd64 architecture and write it into the flash
     If syspatch complaints about invalid URL in `/etc/installurl` run command
     `echo "https://ftp.eu.openbsd.org/pub/OpenBSD" > /etc/installurl`
     (or use another mirror that is closer to you).
-42. `pkg_add sudo base64 colorls cmake coreutils stow the_silver_searcher ggrep git gmake gsed gnupg-2.2.4 groff firefox zathura zathura-ps zathura-pdf-mupdf sdl2 sdl2-image sdl2-mixer sdl2-ttf`
+42. `pkg_add sudo base64 colorls cmake coreutils feh stow the_silver_searcher ggrep git gmake gsed gnupg-2.2.4 groff firefox zathura zathura-ps zathura-pdf-mupdf sdl2 sdl2-image sdl2-mixer sdl2-ttf`
     Install any additional packages you might need. Above is just an example, if you do not need something, don't install it.
 43. Use `visudo` command to give 'wheel' group sudo permissions,
     by uncommenting the wheel-line from the sudoers file, as
@@ -187,3 +187,15 @@ by adding line similar to the one below (check and use the correct device name):
 ```
 /dev/sd2i /stick msdos rw,noauto
 ```
+
+To Add a nice OpenBSD themed Desktop wallpaper, run the following commands:
+
+````
+curl -O https://www.openbsd.org/art/puffy/ppuf1000X907.gif
+feh --bg-scale ppuf1000X907.gif
+````
+
+The commands above download a picture and then create a `.fehbg` file.
+`.xinitrc` checks if that file exists and if it does, runs it, so the wallpaper
+endures reboots.
+
