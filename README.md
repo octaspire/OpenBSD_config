@@ -31,6 +31,7 @@ Some highlights of the configuration:
 * Installs a nice-looking TrueType font for xterm (and other xorg).
 * Uses *cwm* from the OpenBSD base as the window manager. Cwm keybindings are changed so that those would not conflict with the ones from GNU Emacs.
 * Uses *Korn shell* from the OpenBSD base as the shell.
+    * Adds custom Korn shell TAB completion for the UNIX password store (pass) command.
 * Uses *mg* from the OpenBSD base as the editor.
 * Turns CapsLock into a Ctrl (in both console and xorg).
 * Turns AltGr into an Alt/Meta (in both console and xorg).
