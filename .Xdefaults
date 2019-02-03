@@ -4,3 +4,4 @@ XTerm*faceSize: 12
 XTerm*metaSendEscape: true
 XTerm*eightBitInput: false
 XTerm*selectToClipboard: true
+XTerm*termName: xterm-256color
