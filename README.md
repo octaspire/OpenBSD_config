@@ -200,3 +200,44 @@ The commands above download a picture and then create a `.fehbg` file.
 `.xinitrc` checks if that file exists and if it does, runs it, so the wallpaper
 endures reboots.
 
+## System performance improvements
+
+Security features are more important in OpenBSD than
+the system performance and thus some programs, for example
+web browsers, might feel slow compared to other systems.
+
+System performance can be improved, for example, by using
+*soft updates* and *ramdisk on /tmp*.
+
+Soft updates can be enabled by modifying file `/etc/fstab` and using
+option `softdep`. For example:
+
+````
+... / ffs rw,softdep 1 1
+````
+
+Although it might be better to do this only for user partitions (?).
+
+To use fast ramdisk for `/tmp`, the previous `/tmp` line in file
+`/etc/fstab` can be replaced with this line (or with something
+similar):
+
+````
+swap /tmp mfs rw,noexec,nosuid,nodev,noatime,-s=2G 0 0
+````
+
+By using other value instead of `2G` the size of the ramdisk
+can be changed. Depending of the available RAM, you might
+want to use a larger or smaller value.
+
+Before the mountpoint `/tmp` is mounted, the permissions
+should be fixed:
+
+````sh
+# chmod 1777 /tmp
+````
+
+If this is not done, `startx` (for example) might fail and
+complaint that it cannot write into `/tmp`. In this case
+fixing the permissions of `/tmp` and mounting it again
+will fix the problem.
