@@ -1,3 +1,5 @@
+export LC_CTYPE="en_US.UTF-8"
+
 xset -b                                 # Disable bell
 xsetroot -solid black &
 
