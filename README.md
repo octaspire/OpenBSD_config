@@ -241,3 +241,29 @@ If this is not done, `startx` (for example) might fail and
 complaint that it cannot write into `/tmp`. In this case
 fixing the permissions of `/tmp` and mounting it again
 will fix the problem.
+
+## Updating
+
+When updating the system (for example to follow current, or
+to get a new release of OpenBSD), the (U)pgrade installer asks:
+
+````
+Available disks are: sd0 sd1.
+which disk is the root disk?
+````
+
+Answer here `sd1`.
+
+## Notes
+
+`xenodm(1)` can be enabled after installation with:
+
+````
+# rcctl enable xenodm
+# rcctl start xenodm
+````
+
+In this case, to get the same settings that with `startx(1)`
+(for example `cwm`, CapsLock modifications, etc.)
+the file `.xsession` should contain the same
+settings that file `.xinitrc`.

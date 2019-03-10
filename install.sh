@@ -41,7 +41,7 @@ cp .inputrc    "$HOME"
 cp .Xdefaults  "$HOME"
 cp .Xresources "$HOME"
 cp .xinitrc    "$HOME"
-
+cp .xsession   "$HOME"
 
 ###########################################################################
 # Copy wsconsctl.conf, doas.conf and rc.conf.local into /etc using sudo
